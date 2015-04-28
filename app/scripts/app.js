@@ -15,19 +15,19 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngMaterial'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider,$mdThemingProvider) {
+    $mdThemingProvider.theme('default')
+    .primaryPalette('blue')
+    .accentPalette('orange');
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
+        .when('/login', {
+            templateUrl: 'views/login.html',
+            controller: 'LoginCtrl'
+          })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/login'
       });
   });
