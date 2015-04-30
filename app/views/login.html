@@ -1,38 +1,45 @@
-<div ng-controller="LoginCtrl" layout="column" layout-fill>
-  <md-toolbar md-scroll-shrink>
-    <div class="md-toolbar-tools">
-      <h3>
-        <span>My App Title</span>
-      </h3>
-    </div>
-  </md-toolbar>
-  <md-content style="height: 600px;">
-      <form name="projectForm">
+
+		
+<div layout="column" layout-align="center center" style="height:100%;">
+  <md-card layout-padding style="background:#fff; width:300px;">
+	<md-card-content>
+        <h2 class="md-title">Sign In</h2>
+		
+	  <form name="projectForm">
       <md-input-container>
         <label>Email Id</label>
-        <input required name="emailId" ng-model="project.emailId">
-        <div ng-messages="projectForm.emailId.$error">
-          <div ng-message="required">This is required.</div>
-        </div>
+        <input type="text"   name="emailId" ng-model="project.emailId" style="background:#fff;">        
       </md-input-container>
           
        <md-input-container>
         <label>Password</label>
-        <input required name="password" ng-model="project.password">
-        <div ng-messages="projectForm.password.$error">
-          <div ng-message="required">This is required.</div>
-        </div>
+        <input type="password"   name="password" ng-model="project.password"  style="background:#fff;">                
       </md-input-container>
+		  <div style="text-align:center">
+      <md-button class="md-raised md-primary">Primary</md-button>
+			  </div>
+    </form>
+	  </md-card-content>
+	  </md-card>
+</div>
+
+<!--
+
+<div ng-controller="LoginCtrl" layout="column" layout-padding layout-margin layout-sm>
+  
+      <form name="projectForm">
+      <md-input-container>
+        <label>Email Id</label>
+        <input type="text"   name="emailId" ng-model="project.emailId" style="background:#fff;">        
+      </md-input-container>
+          
+       <md-input-container>
+        <label>Password</label>
+        <input type="password"   name="password" ng-model="project.password"  style="background:#fff;">                
+      </md-input-container>
+		  
       <md-button class="md-raised md-primary">Login</md-button>
     </form>
-      <md-button class="md-fab md-primary" aria-label="Use Android">
-          <md-icon md-svg-src="img/icons/android.svg"></md-icon>
-        </md-button>
-      <md-button class="md-fab md-primary" aria-label="Use Android">
-          <md-icon md-svg-src="img/icons/android.svg"></md-icon>
-        </md-button>
-      <md-button class="md-fab md-primary" aria-label="Use Android">
-          <md-icon md-svg-src="img/icons/android.svg"></md-icon>
-        </md-button>
-  </md-content>
-</div>
+      
+  
+</div>-->
